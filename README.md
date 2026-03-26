@@ -98,119 +98,141 @@ encrypted-notes/
 └── README.md
 ```
 
-```
-🔐 Security Highlights
+---
 
-CipherNotes stores note content in encrypted form using AES-256 encryption before saving to MongoDB.
+## 🔐 Security Highlights
 
-Security flow
-User passwords are hashed using bcrypt
-Authentication uses JWT
-Protected routes verify the token before giving access
-Note content is encrypted before storing in the database
-Encrypted content is decrypted only when notes are fetched for the authenticated user
+CipherNotes stores note content in encrypted form using **AES-256** encryption before saving to MongoDB.
 
-Note: This project uses a backend-managed encryption key from the .env file for development and demonstration purposes.
+### Security Flow
 
-🚀 Getting Started
-1. Clone the repository
+- Passwords are hashed using **bcrypt**
+- Authentication is handled using **JWT**
+- Protected routes verify token before access
+- Note content is encrypted before storage
+- Notes are decrypted only when fetched for the user
+
+> ⚠️ Note: This project uses a backend-managed encryption key from `.env` for demonstration purposes.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/Far-200/encrypted-notes.git
 cd encrypted-notes
-⚙️ Backend Setup
-1. Go to backend
+```
+
+---
+
+## ⚙️ Backend Setup
+
+```bash
 cd backend
-2. Install dependencies
 npm install
-3. Create a .env file inside backend/
+```
+
+Create `.env` file inside backend:
+
+```env
 PORT=5000
 MONGO_URI=mongodb://127.0.0.1:27017/encrypted_notes_app
 JWT_SECRET=your_super_secret_jwt_key
 ENCRYPTION_KEY=12345678901234567890123456789012
-4. Start backend
+```
+
+Run backend:
+
+```bash
 npm run dev
+```
 
-Backend runs on:
+---
 
-http://localhost:5000
-💻 Frontend Setup
-1. Go to frontend
+## 💻 Frontend Setup
+
+```bash
 cd frontend
-2. Install dependencies
 npm install
-3. Start frontend
 npm run dev
+```
 
-Frontend usually runs on:
+---
 
-http://localhost:5173
-🔄 API Overview
-Auth Routes
-Method	Route	Description
-POST	/api/auth/register	Register new user
-POST	/api/auth/login	Login user
-GET	/api/auth/me	Get current logged-in user
-Note Routes
-Method	Route	Description
-GET	/api/notes	Fetch all notes for logged-in user
-POST	/api/notes	Create note
-PUT	/api/notes/:id	Update note
-DELETE	/api/notes/:id	Delete note
-PATCH	/api/notes/:id/pin	Toggle pin/unpin
-🧪 Current Functionality
-Authentication flow works
-Protected dashboard works
-Notes are user-specific
-Search works
-Pin/unpin works
-Edit works
-Delete works
-Note content is encrypted before storage
-📸 Screenshots
+## 🔄 API Overview
 
-Add your screenshots here after pushing the project.
+### Auth Routes
 
-Example:
+| Method | Route                | Description      |
+| ------ | -------------------- | ---------------- |
+| POST   | `/api/auth/register` | Register user    |
+| POST   | `/api/auth/login`    | Login user       |
+| GET    | `/api/auth/me`       | Get current user |
+
+### Note Routes
+
+| Method | Route                | Description |
+| ------ | -------------------- | ----------- |
+| GET    | `/api/notes`         | Get notes   |
+| POST   | `/api/notes`         | Create note |
+| PUT    | `/api/notes/:id`     | Update note |
+| DELETE | `/api/notes/:id`     | Delete note |
+| PATCH  | `/api/notes/:id/pin` | Toggle pin  |
+
+---
 
 ## 📸 Screenshots
 
+```md
+## 📸 Screenshots
+
 ### Login Page
-![Login Page](./screenshots/login.png)
+
+![Login](./screenshots/login.png)
 
 ### Dashboard
+
 ![Dashboard](./screenshots/dashboard.png)
 
-### Notes View
-![Notes View](./screenshots/notes.png)
+### Notes
 
-You can create a screenshots/ folder in the repo root and place images there.
-
-🌱 Future Improvements
-Separate Note Editor page
-Rich text / markdown notes
-Archive and restore notes
-Tags / categories
-Dark/light theme toggle
-Deploy frontend and backend
-Better encryption key management
-Mobile UI refinements
-🧠 What I Learned
-
-This project helped reinforce:
-
-Authentication and protected route flow
-REST API design
-State management in React
-CRUD operations with MongoDB
-Secure password handling
-Encryption and decryption of sensitive user data
-Component-based frontend organization
-👨‍💻 Author
-
-Farhaan Khan
-
-GitHub: Far-200
-Portfolio: farhaankhan.dev
-📜 License
-
-This project is for learning, portfolio, and demonstration purposes.
+![Notes](./screenshots/notes.png)
 ```
+
+---
+
+## 🌱 Future Improvements
+
+- Rich text / markdown notes
+- Tags and categories
+- Archive notes
+- Dark/light mode toggle
+- Deployment
+- Better key management
+
+---
+
+## 🧠 What I Learned
+
+- Full-stack authentication flow
+- Secure API design
+- Encryption handling
+- React state management
+- Clean component architecture
+
+---
+
+## 👨‍💻 Author
+
+**Farhaan Khan**
+
+- GitHub: https://github.com/Far-200
+- Portfolio: https://farhaankhan.dev
+
+---
+
+## 📜 License
+
+For learning and portfolio use.
