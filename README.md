@@ -183,23 +183,26 @@ npm run dev
 
 ---
 
-## 📸 Screenshots
+---
+
+## ✅ CORRECT (this is what you want)
+
+Replace your screenshot section with this:
 
 ```md
 ## 📸 Screenshots
 
 ### Login Page
 
-![Login](./screenshots/login.png)
+![Login Page](./screenshots/Login_Page.png)
 
 ### Dashboard
 
-![Dashboard](./screenshots/dashboard.png)
+![Dashboard](./screenshots/Welcome.png)
 
-### Notes
+### Notes View
 
-![Notes](./screenshots/notes.png)
-```
+![Notes](./screenshots/Your_Notes.png)
 
 ---
 
@@ -236,3 +239,4 @@ npm run dev
 ## 📜 License
 
 For learning and portfolio use.
+```
