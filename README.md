@@ -186,3 +186,4 @@ npm run dev
 ## 📜 License
 
 For learning and portfolio use.
+Looking for ideas to improve it.
