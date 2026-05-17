@@ -187,3 +187,4 @@ npm run dev
 
 For learning and portfolio use.
 Looking for ideas to improve it.
+Halting development for now🫠🫠
